@@ -23,7 +23,7 @@ class AgentLoop:
     ):
         self.llm = llm_provider or get_llm_provider()
         self.tracer = tracer or Tracer()
-        self.max_steps = max_steps or settings.MAX_STEPS
+        self.max_steps = max_steps if max_steps is not None else settings.MAX_STEPS
         
         # Register Tools
         default_tools = [
@@ -55,7 +55,24 @@ class AgentLoop:
         run = self.tracer.start_run(user_prompt=user_prompt)
         history: List[Dict[str, Any]] = []
         step_number = 1
-        
+
+        # Check early max_steps constraint
+        if self.max_steps <= 0:
+            self.tracer.log_event(
+                run_id=run.run_id,
+                step_number=1,
+                event_type=TraceEventType.MAX_STEPS_REACHED,
+                status="FAILED",
+                error_type=ErrorType.MAX_STEPS_EXCEEDED
+            )
+            return self.tracer.finish_run(
+                run=run,
+                final_response="Task failed: Maximum step limit reached immediately.",
+                success=False,
+                primary_failure_type=ErrorType.MAX_STEPS_EXCEEDED,
+                primary_failure_step=1
+            )
+
         while step_number <= self.max_steps:
             run.total_steps = step_number
             
@@ -142,7 +159,7 @@ class AgentLoop:
 
             step_number += 1
 
-        # 4. Maximum Steps Exceeded
+        # 4. Maximum Steps Exceeded Fallback
         self.tracer.log_event(
             run_id=run.run_id,
             step_number=step_number,
