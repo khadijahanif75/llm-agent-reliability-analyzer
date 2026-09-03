@@ -1,0 +1,104 @@
+[
+  {
+    "id": "calc_001",
+    "prompt": "What is 345 multiplied by 72?",
+    "expected_tool": "calculator",
+    "category": "math"
+  },
+  {
+    "id": "calc_002",
+    "prompt": "Calculate 1245 + 982 - 45",
+    "expected_tool": "calculator",
+    "category": "math"
+  },
+  {
+    "id": "calc_003",
+    "prompt": "What is 100 divided by 4?",
+    "expected_tool": "calculator",
+    "category": "math"
+  },
+  {
+    "id": "calc_004",
+    "prompt": "Calculate 25 * 40 * 12",
+    "expected_tool": "calculator",
+    "category": "math"
+  },
+  {
+    "id": "calc_005",
+    "prompt": "What is 999 minus 432?",
+    "expected_tool": "calculator",
+    "category": "math"
+  },
+  {
+    "id": "search_001",
+    "prompt": "Search for information about Celine Dion",
+    "expected_tool": "search",
+    "category": "search"
+  },
+  {
+    "id": "search_002",
+    "prompt": "Find population of Canada",
+    "expected_tool": "search",
+    "category": "search"
+  },
+  {
+    "id": "search_003",
+    "prompt": "Search for details on Dubai tourism",
+    "expected_tool": "search",
+    "category": "search"
+  },
+  {
+    "id": "search_004",
+    "prompt": "Find information about AI agents",
+    "expected_tool": "search",
+    "category": "search"
+  },
+  {
+    "id": "search_005",
+    "prompt": "Search Python language creator",
+    "expected_tool": "search",
+    "category": "search"
+  },
+  {
+    "id": "db_001",
+    "prompt": "Find the university record for Toronto",
+    "expected_tool": "database",
+    "category": "database"
+  },
+  {
+    "id": "db_002",
+    "prompt": "Find student record for Amina",
+    "expected_tool": "database",
+    "category": "database"
+  },
+  {
+    "id": "db_003",
+    "prompt": "Lookup university record for Waterloo",
+    "expected_tool": "database",
+    "category": "database"
+  },
+  {
+    "id": "db_004",
+    "prompt": "Find student record for Liam",
+    "expected_tool": "database",
+    "category": "database"
+  },
+  {
+    "id": "db_005",
+    "prompt": "Lookup record for University Alpha",
+    "expected_tool": "database",
+    "category": "database"
+  },
+  {
+    "id": "direct_001",
+    "prompt": "Hello, how are you today?",
+    "expected_tool": "final_answer",
+    "category": "direct_response"
+  },
+  {
+    "id": "direct_002",
+    "prompt": "What can you do?",
+    "expected_tool": "final_answer",
+    "category": "direct_response"
+  }
+]
