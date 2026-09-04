@@ -72,11 +72,11 @@ This project bridges this observability gap by wrapping a structured instrumenta
                  │
       ┌──────────┴──────────┐
       ▼                     ▼
-  Reliability Metrics    Failure Analysis
-      │                     │
-      └──────────┬──────────┘
-                 ▼
-        Streamlit Dashboard
+   Reliability Metrics    Failure Analysis
+        │                     │
+        └──────────┬──────────┘
+                   ▼
+          Streamlit Dashboard
 
 ### Execution Flow
 1. **User Prompt Submission:** The user or benchmark runner submits a query to `AgentLoop`.
