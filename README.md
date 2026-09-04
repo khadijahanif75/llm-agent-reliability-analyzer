@@ -47,7 +47,7 @@ This project bridges this observability gap by wrapping a structured instrumenta
                              │
           ┌──────────────────┼──────────────────┐
           ▼                  ▼                  ▼
-   CalculatorTool       SearchTool       DatabaseTool
+      CalculatorTool       SearchTool       DatabaseTool
           │                  │                  │
           └──────────────────┼──────────────────┘
                              ▼
