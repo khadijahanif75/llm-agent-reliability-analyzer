@@ -72,7 +72,7 @@ This project bridges this observability gap by wrapping a structured instrumenta
                  │
       ┌──────────┴──────────┐
       ▼                     ▼
-Reliability Metrics    Failure Analysis
+  Reliability Metrics    Failure Analysis
       │                     │
       └──────────┬──────────┘
                  ▼
